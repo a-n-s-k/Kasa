@@ -1,0 +1,41 @@
+
+img {
+  display: flex;
+  width: 210px;
+  justify-content: left;
+  color:#ff6060;
+  @media screen and (max-width: 768px) {
+      width: 145px;
+  }
+}
+nav {
+  display: flex;
+  width: 309px;
+  justify-content: right;
+  column-gap: 57px;
+  list-style: none;
+  @media screen and (max-width: 768px) {
+      column-gap: 30px;
+  }
+  @media screen and (max-width: 375px) {
+    column-gap: 20px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
+    @media screen and (max-width: 768px) {
+        font-size: 20px;
+    }
+    @media screen and (max-width: 375px) {
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  }
+  .active {
+    text-decoration: underline;
+  }
+}

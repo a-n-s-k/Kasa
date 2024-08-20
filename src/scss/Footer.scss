@@ -1,0 +1,16 @@
+
+    img {
+        width: 122px;
+        height: 40px;
+        color: #fff;
+      @media (max-width: 768px) {
+        height: 47px;
+      }
+    }
+    .f-text {
+        color: #fff;
+        font-size: 24px;
+          @media (max-width: 800px) {
+            font-size: 18px;
+        }
+    }

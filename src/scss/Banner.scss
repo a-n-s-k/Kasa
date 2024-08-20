@@ -1,0 +1,51 @@
+$banner-url: url('./../assets/images/bannerimage.png');
+$banner-url-about: url('./../assets/images/aproposimage.png');
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 210px;
+    border-radius: 25px;
+    background-position: 25% 50%;
+    background-size: cover;
+    @media screen and (max-width: 768px) {
+          height: 125px;
+    }
+    h1 {
+        color: #ffffff;
+        font-size: 48px;
+        font-weight: 500;
+        @media screen and (max-width: 768px) {
+            font-size: 24px;
+      }
+    }
+  }
+  .banner-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 210px;
+    border-radius: 25px;
+    background-position: 25% 50%;
+    background-size: cover;
+    @media screen and (max-width: 768px) {
+          height: 250px;
+    }
+    h1 {
+        color: #ffffff;
+        font-size: 48px;
+        font-weight: 500;
+        @media screen and (max-width: 768px) {
+            font-size: 24px;
+      }
+    }
+  }
+
+.bannerstyle { 
+      background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), $banner-url;
+}
+.bannerstyleabout { 
+      background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), $banner-url-about;
+}
