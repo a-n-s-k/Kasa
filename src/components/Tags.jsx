@@ -2,9 +2,9 @@ import "./../scss/Tags.scss";
 
 export default function Tags ({ tags }) {
   return (
-    <div className="housing-tags">
+      <div className="logement-tags">
       {tags.map((tag, tagIndex) => (
-        <p key={tagIndex} className="tag">
+        <p key={tagIndex} className="tags">
           {tag}
         </p>
       ))}

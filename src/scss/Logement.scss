@@ -3,39 +3,20 @@
   max-width: 1240px;
   display: flex;
   flex-direction: column;
-    @media screen and (max-width: 768px) {
-          margin: 0 20px;
-      }
-    .logement-header img{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        height: 416px;
-    }
-    .title-localisation-host {
+  @media screen and (max-width: 768px) {
+    margin: 0 20px;
+  }
+    .title-location-host {
       display: flex;
       justify-content: space-between;
       width: 100%;
       height: 77px;
-      .title-localisation {
-        display: flex;
-        flex-direction: column;
-        .logement-localisation {
-          margin-top: 5px;
-          font-size: 18px;
-        }
-        .logement-title {
-          color: #ff6060;
-          font-size: 30px;
-          @media screen and (max-width: 768px) {
-              font-size: 18px;
-          }
-        } 
-      }
-      .logement-host {
-        display: flex;
-        flex-direction: column;
-      }
+    }
+    .tags-rates {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 77px;
     }
     .collapses-logement {
       display: flex;

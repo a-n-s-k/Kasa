@@ -1,19 +1,18 @@
 import "./../scss/Host.scss";
-import Stars from "./Stars.jsx";
 
-export default function Host ({ rating, firstName, lastName, picture }) {
+export default function Host ({ name, picture }) {
+  
+  const nomPrenom = name.split(" ");
+  const firstName = nomPrenom[0];
+  const lastName = nomPrenom[1];
+
   return (
-    <div className="housing-host">
       <div className="host-info">
         <div className="host-name">
           <p>{firstName}</p>
           <p>{lastName}</p>
         </div>
-        <img className="host-img" src={picture} alt="host" />
+        <img src={picture} alt={name} />
       </div>
-      <div className="host-rating">
-        <Stars rating={rating} />
-      </div>
-    </div>
   );
 }

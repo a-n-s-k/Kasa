@@ -1,16 +1,22 @@
-import coloredIcon from "./../assets/images/rating-coloredicon.svg";
-import notColoredIcon from "./../assets/images/rating-notcoloredicon.svg";
+import coloredStar from "./../assets/images/star_red.png";
+import notColoredStar from "./../assets/images/star_gray.png";
+import "./../scss/Stars.scss";
 
-// creation array de 5 elements de valeurs undefined
-const starArray = Array(5).fill();
+const starsArray = [1, 2, 3, 4, 5];
 
-const FilledStar = () => <img src={coloredIcon} className="rating-icon" alt="filled-star" />;
+const ColoredStar = () => <img src={coloredStar} className="stars" alt="PinkStar" />;
 
-const EmptyStar = () => <img src={notColoredIcon} className="rating-icon" alt="empty-star" />;
+const NotColoredStar = () => <img src={notColoredStar} className="stars" alt="GreyStar" />;
 
 const Star = ({ index, rating }) =>
-  index < rating ? <FilledStar key={index} /> : <EmptyStar key={index} />;
+  index < rating ? <ColoredStar key={index} /> : <NotColoredStar key={index} />;
 
 export default function Stars({ rating }) {
-  return starArray.map((_, index) => <Star key={index} index={index} rating={rating} />);
+    return (
+        <div className="logement-stars">
+            {
+            starsArray.map((index) => <Star index={index} rating={rating} />)
+            }
+        </div>
+    )
 }

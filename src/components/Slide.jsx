@@ -20,13 +20,16 @@ export default function Slide ({slides}) {
   return (
     <div className="slide-container">
       {images.map((image, index) => {
-        return <div key={index}>{index === current && <img className="housing-img" src={image} alt="housing" />}</div>;
+        return (
+          <div key={index} className="slide-images">
+          {index === current && <img className="slide-img" src={image} alt="Photos Logement" />}
+          </div>);
       })}
 
       {length > 1 && ( // Condition pour afficher le compteur et les flèches uniquement s'il y a plus d'une image
         <div className="slide-controls">
-          <img src={arrowPrev} onClick={prevImage} className="arrow" alt="Preview icon" />
-          <img src={arrowNext} onClick={nextImage} className="arrow" alt="Next icon" />
+          <img src={arrowPrev} onClick={prevImage} className="slide-arrow" alt="Pécédent" />
+          <img src={arrowNext} onClick={nextImage} className="slide-arrow" alt="Suivant" />
         </div>
       )}
 
