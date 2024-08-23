@@ -1,5 +1,5 @@
-$banner-url: url('./../assets/images/bannerimage.png');
-$banner-url-about: url('./../assets/images/aproposimage.png');
+@import "./Variables.scss";
+
 .banner {
     display: flex;
     justify-content: center;
@@ -9,14 +9,15 @@ $banner-url-about: url('./../assets/images/aproposimage.png');
     border-radius: 25px;
     background-position: 25% 50%;
     background-size: cover;
-    @media screen and (max-width: 768px) {
-          height: 125px;
+    @media screen and (max-width: 375px) {
+            width: 335px;
+            height: 111px;
     }
     h1 {
         color: #ffffff;
         font-size: 48px;
         font-weight: 500;
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 375px) {
             font-size: 24px;
       }
     }
@@ -30,22 +31,23 @@ $banner-url-about: url('./../assets/images/aproposimage.png');
     border-radius: 25px;
     background-position: 25% 50%;
     background-size: cover;
-    @media screen and (max-width: 768px) {
-          height: 250px;
+    @media screen and (max-width: 375px) {
+      width: 335px;
+      height: 111px;
     }
     h1 {
         color: #ffffff;
         font-size: 48px;
         font-weight: 500;
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 375px) {
             font-size: 24px;
       }
     }
   }
 
 .bannerstyle { 
-      background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), $banner-url;
+      background-image: $bgLinearGradient, $banner-url;
 }
 .bannerstyleabout { 
-      background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), $banner-url-about;
+      background-image: $bgLinearGradient, $banner-url-about;
 }

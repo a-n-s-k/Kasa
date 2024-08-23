@@ -2,13 +2,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    column-gap: 10px;
     .host-name {
         color: #ff6060;
-        font-weight: 500;
+        p {
+        display: flex;
+        font-size: 18px;
+        justify-content: space-evenly;
+        }
     }
     img {
         border-radius: 50%;
-        width: 54px;
+        width: 64px;
+        height: 64px;
     }
 }

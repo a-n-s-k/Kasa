@@ -5,7 +5,7 @@ export default function Host ({ name, picture }) {
   const nomPrenom = name.split(" ");
   const firstName = nomPrenom[0];
   const lastName = nomPrenom[1];
-
+  
   return (
       <div className="host-info">
         <div className="host-name">

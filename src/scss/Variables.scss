@@ -1,0 +1,31 @@
+// Media
+$mobile-media: (max-width: 375px);
+$tablet-media: (max-width: 768px);
+$desktop-media: (max-width: 1240px);
+
+// Width
+$mobile-width: 375px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+// BackGround
+$banner-url: url('./../assets/images/bannerimage.png');
+$banner-url-about: url('./../assets/images/aproposimage.png');
+$bgLinearGradient: linear-gradient(hsla(0, 0%, 0%, 0.25), hsla(0, 0%, 0%, 0.25));
+
+
+
+
+
+
+@mixin flexContentCenter {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexDirectionColumn {
+    flex-direction: column;
+}
+

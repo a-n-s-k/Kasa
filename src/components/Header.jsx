@@ -1,13 +1,18 @@
-import logo from './../assets/images/Logo.svg';
-import { React } from 'react';
-import { NavLink, useLocation } from "react-router-dom";
+import React from 'react';
 import './../scss/Header.scss';
+import logo from './../assets/images/Logo.svg';
+import { NavLink, useLocation } from "react-router-dom";
+
 
 export default function Header () {
+
   const location = useLocation("");
+
   return (
     <header>
-      <img src={logo} alt="Logo" />
+      <div className="logo"> 
+        <img src={logo} alt="Logo Kasa" />
+      </div>
       <nav>
         <NavLink to="/"  className={location.pathname === "/accueil" ? "active" : ""}>
           Accueil

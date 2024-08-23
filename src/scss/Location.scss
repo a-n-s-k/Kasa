@@ -3,7 +3,25 @@
     flex-direction: column;
 
     .logement-title {
-      color: #ff6060;
+      color: hsl(0, 100%, 69%);
+      font-size: 30px;
+      @media screen and (max-width: 768px) {
+          font-size: 18px;
+      }
+    }
+    .logement-location {
+        margin-top: 5px;
+        font-size: 18px;
+      }
+  }
+
+
+  .title-location {
+    display: flex;
+    flex-direction: column;
+
+    .logement-title {
+      color: hsl(0, 100%, 69%);
       font-size: 30px;
       @media screen and (max-width: 768px) {
           font-size: 18px;

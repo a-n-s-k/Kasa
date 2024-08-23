@@ -1,26 +1,40 @@
-import { useState } from "react";
-import icon from "./../assets/images/Vector.svg";
 import "./../scss/Collapse.scss";
-const iconInitialState = {
-  transform: "rotate(180deg)",
-};
+import React, { useState } from "react";
+import arrowIcon from './../assets/images/arrow.png'
+
 
 export default function Collapse ({ title, children }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [iconStyle, setIconStyle] = useState(iconInitialState);
+
+  const [openButton, setOpenButton] = useState(false);
+  const [openButtonStyle, setOpenButtonStyle] = useState("initial-icon");
 
   const toggleCollapse = () => {
-    setIsOpen(!isOpen);
-    setIconStyle(isOpen ? iconInitialState : { transform: "rotate(0deg)", transition: "all 0.17s linear" });
+    setOpenButton(!openButton);
+    setOpenButtonStyle(openButton ? "initial-icon" : "final-icon");
   };
 
   return (
-    <div className="collapse-container">
+    <div className="collapses-container">
       <button className="collapse-button" onClick={toggleCollapse}>
         {title}
-        <img src={icon} className="collapse-icon" alt="collapse icon" style={iconStyle} />
+        <img src={arrowIcon} className={`collapse-icon ${openButtonStyle}`} alt="collapse icon" />
       </button>
-      {isOpen && <div className="collapse-content">{children}</div>}
+      {openButton && <div className="collapse-content">{children}</div>}
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

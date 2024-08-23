@@ -6,21 +6,21 @@ import Header from "./../components/Header.jsx";
 
 export default function Apropos() {
 
+  const listAbout = collapsesData.map((item, index) => (
+    <Collapse key={index} title={item.title} children={item.content} />
+));
+
   return (
     <>
       <Header />
       <main className="main">
         <Banner text="" className="banner-about bannerstyleabout" />
-        <section className="collapses-container">
-          {collapsesData.map((collapse) => (
-            <Collapse title={collapse.title} key={collapse.title}>
-              <p>{collapse.content}</p>
-            </Collapse>
-          ))}
-        </section>
+          {listAbout}
       </main>
       <Footer />
     </>
   );
 }
+
+
 

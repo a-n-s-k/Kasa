@@ -1,23 +1,17 @@
-import { useParams } from "react-router-dom";
 import Footer from "./../components/Footer.jsx";
 import Header from "./../components/Header.jsx";
 import Logement from "./../components/Logement.jsx";
-import ItemsData from "./../data/logements.json";
+
 
 
 
 export default function Fichelogement () {
-    //On récupère la bonne fiche
-    const { ficheId } = useParams();
-    const ficheHabitat = ItemsData.find((item) => item.id === ficheId);
 
   return (
     <>
         <Header />
         <main className="main">
-          <section className="cards-container">
-                <Logement key={ficheHabitat.id} item={ficheHabitat} />
-          </section>
+               <Logement />
         </main>
         <Footer />
     </>
