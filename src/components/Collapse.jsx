@@ -15,12 +15,15 @@ export default function Collapse ({ title, children }) {
   };
 
   return (
-    <div className="collapse-container">
+    // <div className="collapse-container">
+    <>
       <button className="collapse-button" onClick={toggleCollapse}>
         {title}
         <img src={icon} className="collapse-icon" alt="collapse icon" style={iconStyle} />
       </button>
       {isOpen && <div className="collapse-content">{children}</div>}
-    </div>
+    </>
+
+    //</div>
   );
 }

@@ -1,28 +1,29 @@
 import "./../scss/Description.scss";
 import Collapse from "./Collapse.jsx";
 
-export default function Description ({ description, equipments}) {
+export default function Description ({description, equipments}) {
   
-  const equipements = equipments.map((equipment, index) => {
-    return (
-      <ul key={index}>
-        <li>{equipment}</li>
-      </ul>
-    );
-  });
-
   return (
     <>
-        <div className="collapse-description">
+    <div className="description-equipements">
+
+        <div className="collapses-container">
             <Collapse title="Description">
-                <p className="description-content">{description}</p>
+              <p > {description}</p>
             </Collapse>
         </div>
-        <div className="collapse-equipement">
-            <Collapse title="Equipement">
-                <div className="equipement-content">{equipements}</div>
-            </Collapse>
+
+        <div className="collapses-container">
+          <Collapse title="Equipement">
+            {equipments.map((equipment, index) => {
+              return ( <ul key={index}>
+                  <li>{equipment}</li>
+                </ul>);
+            })}
+          </Collapse>      
         </div>
+
+      </div>
     </>  
   );
 }
