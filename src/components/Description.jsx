@@ -3,7 +3,6 @@ import Collapse from "./Collapse.jsx";
 
 export default function Description ({ description, equipments}) {
   
-  /* Équipements */
   const equipements = equipments.map((equipment, index) => {
     return (
       <ul key={index}>
