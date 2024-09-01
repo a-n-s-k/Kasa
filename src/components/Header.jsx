@@ -7,7 +7,10 @@ export default function Header () {
   const location = useLocation("");
   return (
     <header>
-      <img src={logo} alt="Logo" />
+      <div className="logo">
+        <img src={logo} alt="Logo" />
+      </div>
+      
       <nav>
         <NavLink to="/"  className={location.pathname === "/accueil" ? "active" : ""}>
           Accueil

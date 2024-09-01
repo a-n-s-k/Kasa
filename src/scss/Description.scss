@@ -1,10 +1,15 @@
-   .description-equipements {
-      display: flex;
-      justify-content: space-between;
-      column-gap: 20px;
-      width: 100%;
+@import "./Variables.scss";
+   
+.description-equipements {
+  @include displayFlex;
+  justify-content: space-between;
+  column-gap: 20px;
+  width: 100%;
 
+  @include screenMax375 {
+    @include flexDirectionColumn;
   }
+}
     
 
 

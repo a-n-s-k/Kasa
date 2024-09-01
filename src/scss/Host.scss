@@ -1,14 +1,16 @@
+@import "./Variables.scss";
+
 .host-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    .host-name {
-        color: #ff6060;
-        font-weight: 500;
-    }
-    img {
-        border-radius: 50%;
-        width: 54px;
-    }
+  @include displayFlex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  .host-name {
+    color: $colorFf6060;
+    font-weight: 500;
+  }
+  img {
+    border-radius: 50%;
+    width: 54px;
+  }
 }

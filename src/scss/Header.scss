@@ -1,41 +1,47 @@
-
-img {
-  display: flex;
-  width: 210px;
+@import "./Variables.scss";
+.logo {
+  width: 30%;
   justify-content: left;
-  color:#ff6060;
-  @media screen and (max-width: 768px) {
+  img {
+    @include displayFlex;
+    width: 210px;
+    color: $colorFf6060;
+    @include screenMax768 {
       width: 145px;
+    }
   }
 }
-nav {
-  display: flex;
-  width: 309px;
-  justify-content: right;
-  column-gap: 57px;
-  list-style: none;
-  @media screen and (max-width: 768px) {
+
+  nav {
+    @include displayFlex;
+    //width: 309px;
+    width: 69%;
+    justify-content: right;
+    column-gap: 57px;
+    list-style: none;
+    @include screenMax768 {
       column-gap: 30px;
-  }
-  @media screen and (max-width: 375px) {
-    column-gap: 20px;
-  }
-  a {
-    text-decoration: none;
-    color: black;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 142.6%;
-    @media screen and (max-width: 768px) {
+    }
+    @include screenMax375 {
+      column-gap: 10px;
+    }
+    a {
+      text-decoration: none;
+      color: $color000;
+      font-size: 24px;
+      font-style:normal;
+      font-weight: 500;
+      line-height: 142.6%;
+      @include screenMax768 {
         font-size: 20px;
+      }
+      @include screenMax375 {
+        font-size: 12px;
+        text-transform: uppercase;
+      }
     }
-    @media screen and (max-width: 375px) {
-      font-size: 12px;
-      text-transform: uppercase;
+    .active {
+      text-decoration: underline;
     }
   }
-  .active {
-    text-decoration: underline;
-  }
-}
+  

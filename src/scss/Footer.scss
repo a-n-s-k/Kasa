@@ -1,35 +1,33 @@
+@import "./Variables.scss";
+
 footer {
-  display: flex;
+  @include flexContentCenter;
+  @include flexDirectionColumn;
   max-width: 1440px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 209px;
-  background-color: #000;
+  background-color: $color000;
   bottom: 0;
   width: 100%;
   row-gap: 20px;
-  @media (max-width: 375px) {
+  @include screenMax375 {
     padding: 20px;
   }
-
   .f-logo {
-    display: flex;
+    @include displayFlex;
     img {
       width: 122px;
       height: 40px;
     }
-    
   }
   .f-text {
-    display: flex;
-    color: #fff;
+    @include displayFlex;
+    color: $colorFff;
     font-size: 24px;
-      @media (max-width: 375px) {
-        width: 114px;
-       text-align: center;
-        flex-wrap: wrap;
-        font-size: 12px;
+    @include screenMax375 {
+      width: 114px;
+      text-align: center;
+      flex-wrap: wrap;
+      font-size: 12px;
     }
   }
 }

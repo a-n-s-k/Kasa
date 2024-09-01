@@ -1,34 +1,41 @@
+@import "./Variables.scss";
+
+
 .error-container {
-    display: flex;
-    @media screen and (max-width: 768px) {
-          margin-top: 50px;
+  @include flexContentCenter;
+  @include flexDirectionColumn;
+  @include screenMax768 {
+    margin-top: 50px;
+  }
+  .error-title {
+  color: $colorFf6060;
+  font-weight: bold;
+  h1 {
+    font-size: 288px;
+    @include screenMax768 {
+      font-size: 95px;
     }
-    .error-title {
-        color: #ff6060;
-        font-size: 300px;
-        font-weight: 600;
-        text-align: center;
-        @media screen and (max-width: 768px) {
-            font-size: 95px;
-        }
+    }      
+  }
+  .error-msg {
+    color: $colorFf6060;
+    font-size: 30px;
+    @include screenMax768 {
+      font-size: 18px;
     }
-    .error-msg {
-        color: #ff6060;
-        font-size: 30px;
-        @media screen and (max-width: 768px) {
-            font-size: 18px;
-            text-align: center;
-        }
-    }
+  }     
+}
+.back-link {
+  cursor: pointer;
+  margin-top: 8rem;
+  a {
+    color: $color000;
+  }
+  @include screenMax768 {
+    font-size: 14px;
+  }
 }
 
-.back-link {
-    cursor: pointer;
-    margin-top: 8rem;
-    @media screen and (max-width: 768px) {
-        font-size: 14px;
-    }
-}
-  
+
   
  

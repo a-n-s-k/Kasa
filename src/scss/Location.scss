@@ -1,16 +1,17 @@
-.title-location {
-    display: flex;
-    flex-direction: column;
+@import "./Variables.scss";
 
-    .logement-title {
-      color: #ff6060;
-      font-size: 30px;
-      @media screen and (max-width: 768px) {
-          font-size: 18px;
-      }
+.title-location {
+  @include displayFlex;
+  @include flexDirectionColumn;
+  .logement-title {
+    color: $colorFf6060;
+    font-size: 30px;
+    @include screenMax768 {
+      font-size: 18px;
     }
-    .logement-location {
-        margin-top: 5px;
-        font-size: 18px;
-      }
   }
+  .logement-location {
+    margin-top: 5px;
+    font-size: 18px;
+  }
+}

@@ -15,7 +15,7 @@ export default function Stars({ rating }) {
     return (
         <div className="logement-stars">
             {
-            starsArray.map((index) => <Star index={index} rating={rating} />)
+            starsArray.map((index, i) => <Star key={i} index={index} rating={rating} />)
             }
         </div>
     )

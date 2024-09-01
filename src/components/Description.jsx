@@ -9,7 +9,7 @@ export default function Description ({description, equipments}) {
 
         <div className="collapses-container">
             <Collapse title="Description">
-              <p > {description}</p>
+              <p> {description}</p>
             </Collapse>
         </div>
 

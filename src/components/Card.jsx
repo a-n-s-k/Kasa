@@ -1,15 +1,15 @@
-import { Link } from "react-router-dom";
 import "./../scss/Card.scss";
+import { Link } from "react-router-dom";
 
-export default function Card ({ item }) {
+export default function Card ({ coverImage, title, itemId }) {
   return (
-    <article key={item.id} className="card">
-      <Link to={`/logement/${item.id}`} className="card-link">
+    <article key={itemId} className="card">
+      <Link to={`/logement/${itemId}`} className="card-link">
         <div className="img-container">
-          <img src={item.cover} alt={item.title} />
+          <img src={coverImage} alt={title} />
         </div>
         <div className="card-title">
-          <h2>{item.title}</h2>
+          <h2>{title}</h2>
         </div>
       </Link>
     </article>

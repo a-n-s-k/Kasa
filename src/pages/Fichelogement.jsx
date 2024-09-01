@@ -15,7 +15,7 @@ export default function Fichelogement () {
     <>
         <Header />
         <main className="main">
-          <section className="cards-container">
+          <section className="logement-main">
                 <Logement key={ficheHabitat.id} item={ficheHabitat} />
           </section>
         </main>

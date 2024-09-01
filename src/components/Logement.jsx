@@ -1,7 +1,6 @@
 import { useParams, Navigate } from "react-router-dom";
 import Slide from "./../components/Slide.jsx";
 import Tags from "./../components/Tags.jsx";
-//import Collapse from "./../components/Collapse.jsx";
 import Description from "./Description.jsx";
 import Host from "./../components/Host.jsx";
 import Location from "./../components/Location.jsx";
@@ -10,31 +9,29 @@ import ItemsData from "./../data/logements.json";
 import "./../scss/Logement.scss";
 
 export default function Logement () {
-  /* Récupère la bonne fiche */
   const { ficheId } = useParams();
   const ficheHabitat = ItemsData.find((item) => item.id === ficheId);
 
-  return (
-     
+  return (  
   <>
-      {ficheHabitat ? (
-        <div className="logement-main">
-          <section>
-              <Slide slides={ficheHabitat.pictures} />
-            <div className="title-location-host">
+    {ficheHabitat ? (
+      <div>
+        <Slide slides={ficheHabitat.pictures} />
+          <div className="logement-content">
+            <div className="title-location-tags">
               <Location title={ficheHabitat.title} location={ficheHabitat.location}/>
-              <Host name={ficheHabitat.host.name} picture={ficheHabitat.host.picture} />
+              <Tags tags={ficheHabitat.tags} />
             </div>
-            <div className="tags-rates">
-                  <Tags tags={ficheHabitat.tags} />
+            <div className="host-rates">
+              <Host name={ficheHabitat.host.name} picture={ficheHabitat.host.picture} />
               <div className="logement-rates">
-                  <Stars rating={ficheHabitat.rating} />
+                <Stars rating={ficheHabitat.rating} />
               </div>
             </div>
-          </section>
-          <section className="collapses-logement">
+          </div>
+          <div className="collapses-logement">
             <Description description={ficheHabitat.description} equipments= {ficheHabitat.equipments} />
-          </section>
+          </div>
         </div>
       ) : (
         <Navigate replace to="/erreur404" />

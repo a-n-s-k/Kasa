@@ -1,22 +1,24 @@
+@import "./Variables.scss";
+
 .cards-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 4.5rem;
-    width: 97%;
-    padding: 50px;
-    margin: 2rem;
-    border-radius: 25px;
-    background-color: #f6f6f6;
-    @media screen and (max-width: 1230px) {
-          gap: 25px;
-          padding: 25px 15px;
-      }
-      @media screen and (max-width: 980px) {
-          padding: 0;
-          background-color: #fff;
-      }
+  @include flexContentCenter;
+  flex-wrap: wrap;
+  gap: 4.5rem;
+  padding: 50px;
+  margin: 2rem;
+  border-radius: 25px;
+  background-color: $colorF6f6f6;
+  @include screenMax1240 {
+    gap: 25px;
+    padding: 25px 15px;
+  }
+  @include screenMax768 {
+    padding: 25px 15px;
+    background-color: $colorFff;
+  }
+  @include screenMax375 {
+    padding: 0;
+  }
 }
   
  
