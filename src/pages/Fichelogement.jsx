@@ -8,7 +8,6 @@ import ItemsData from "./../data/logements.json";
 
 
 export default function Fichelogement () {
-    //On récupère la bonne fiche
     const { ficheId } = useParams();
     const ficheHabitat = ItemsData.find((item) => item.id === ficheId);
 

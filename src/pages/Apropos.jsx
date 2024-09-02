@@ -13,8 +13,8 @@ export default function Apropos() {
       <main className="main">
         <Banner text="" bannerStyle="banner bannerstyleabout" />
         <section className="collapses-container">
-          {collapsesData.map((collapse) => (
-            <Collapse title={collapse.title} key={collapse.title}>
+          {collapsesData.map((collapse, i) => (
+            <Collapse title={collapse.title} key={i}>
               <p>{collapse.content}</p>
             </Collapse>
           ))}

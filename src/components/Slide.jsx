@@ -25,14 +25,14 @@ export default function Slide ({slides}) {
           </div>);
       })}
 
-      {length > 1 && ( // Condition pour afficher le compteur et les flèches uniquement s'il y a plus d'une image
+      {length > 1 && (
         <div className="slide-controls">
           <img src={arrowPrev} onClick={prevImage} className="slide-arrow" alt="Pécédent" />
           <img src={arrowNext} onClick={nextImage} className="slide-arrow" alt="Suivant" />
         </div>
       )}
 
-      {length > 1 && ( // Condition pour afficher le compteur uniquement s'il y a plus d'une image
+      {length > 1 && (
         <div className="slide-counter">
           <p>
             {current + 1}/{length}
