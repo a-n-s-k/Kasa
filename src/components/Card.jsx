@@ -1,3 +1,4 @@
+import React from 'react';
 import "./../scss/Card.scss";
 import { Link } from "react-router-dom";
 

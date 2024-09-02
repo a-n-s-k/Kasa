@@ -9,27 +9,22 @@
   row-gap: 50px;
   margin: 45px auto 0 auto;
   @media screen and (max-width: 375px) {
-    //min-width: 374px;
-    margin: 25px auto 0 auto;
+    margin: 0;
   }
-
-
 
   header {
     @include displayFlex;
     max-width: 1240px;
     height: 68px;
     width: 100%;
-    //justify-content: space-between;
     align-items: center;
     margin: 0 100px;
-    //margin: 45px 100px 0 100px;
     @include screenMax768 {
       margin: 0 20px;
     }
-/*     @include screenMax375 {
-      justify-content: center;
-    } */
+     @include screenMax375 {
+      max-width: 335px;
+    } 
   }
 
   main {
@@ -42,6 +37,9 @@
     @include screenMax768 {
       margin: 0 20px;
     }
+    @include screenMax375 {
+      max-width: 335px;
+    } 
   }
 
   footer {

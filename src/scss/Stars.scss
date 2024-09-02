@@ -2,6 +2,7 @@
 
 .logement-stars {
   @include displayFlex;
+  justify-content: right;
   gap: 10px;
   .stars {
     @include displayFlex;
@@ -9,6 +10,12 @@
     height: 24px;
     @include screenMax768 {
       margin-top: 50px;
+    }
+    @include screenMax375 {
+      margin: 0;
+      width: 13px;
+      height: 13px;
+      gap:5px;
     }
   }
 }

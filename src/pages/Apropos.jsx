@@ -1,3 +1,4 @@
+import React from 'react';
 import collapsesData from "./../data/collapses.json";
 import Banner from "./../components/Banner.jsx";
 import Collapse from "./../components/Collapse.jsx";

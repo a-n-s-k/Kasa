@@ -1,3 +1,4 @@
+import React from 'react';
 import "./../scss/Host.scss";
 
 export default function Host ({ name, picture }) {

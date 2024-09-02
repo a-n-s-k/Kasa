@@ -1,7 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import arrowNext from "./../assets/images/arrow-next.png";
 import arrowPrev from "./../assets/images/arrow-prev.png";
-
 import "./../scss/Slide.scss";
 
 export default function Slide ({slides}) {

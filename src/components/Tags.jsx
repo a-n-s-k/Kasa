@@ -1,3 +1,4 @@
+import React from 'react';
 import "./../scss/Tags.scss";
 
 export default function Tags ({ tags }) {

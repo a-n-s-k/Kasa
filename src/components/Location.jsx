@@ -1,3 +1,4 @@
+import React from 'react';
 import "./../scss/Location.scss";
 
 export default function Locate ({ title, location }) {

@@ -1,3 +1,4 @@
+import React from 'react';
 import "./../scss/Accueil.scss";
 import Banner from "./../components/Banner.jsx";
 import Footer from "./../components/Footer.jsx";

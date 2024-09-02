@@ -1,3 +1,4 @@
+import React from 'react';
 import "./../scss/Description.scss";
 import Collapse from "./Collapse.jsx";
 

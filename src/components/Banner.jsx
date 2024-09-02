@@ -1,3 +1,4 @@
+import React from 'react';
 import "./../scss/Banner.scss";
 
 export default function Banner ({ text, bannerStyle }) {

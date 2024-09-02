@@ -1,6 +1,7 @@
-import { useState } from "react";
-import icon from "./../assets/images/Vector.svg";
 import "./../scss/Collapse.scss";
+import React, { useState } from "react";
+import icon from "./../assets/images/Vector.svg";
+
 const iconInitialState = {
   transform: "rotate(180deg)",
 };

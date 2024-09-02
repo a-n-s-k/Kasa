@@ -1,3 +1,4 @@
+import React from 'react';
 import { useParams, Navigate } from "react-router-dom";
 import Slide from "./../components/Slide.jsx";
 import Tags from "./../components/Tags.jsx";

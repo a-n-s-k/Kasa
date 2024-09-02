@@ -1,3 +1,4 @@
+import React from 'react';
 import "./../scss/Erreur.scss";
 import { Link } from "react-router-dom";
 import Header from "./../components/Header.jsx";

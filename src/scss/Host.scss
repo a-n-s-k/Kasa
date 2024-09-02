@@ -2,15 +2,23 @@
 
 .host-info {
   @include displayFlex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   gap: 10px;
+
   .host-name {
     color: $colorFf6060;
     font-weight: 500;
+    @include screenMax375 {
+font-size: 12px;
+    }
   }
   img {
     border-radius: 50%;
     width: 54px;
+    @include screenMax375 {
+     width: 32px;
+     height: 32px;
+          }
   }
 }

@@ -7,7 +7,9 @@
   width: 100%;
 
   @include screenMax375 {
+    margin-top: 20px;
     @include flexDirectionColumn;
+    row-gap: 20px;
   }
 }
     

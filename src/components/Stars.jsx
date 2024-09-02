@@ -1,3 +1,4 @@
+import React from 'react';
 import coloredStar from "./../assets/images/star_red.png";
 import notColoredStar from "./../assets/images/star_gray.png";
 import "./../scss/Stars.scss";

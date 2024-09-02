@@ -10,13 +10,18 @@
   }
   .logement-content {
     @include displayFlex;
-    justify-content: space-between;
+    margin-top: 20px;
+    @include screenMax375 {
+      @include flexDirectionColumn;
+      row-gap: 10px;
+    }
     .title-location-tags {
       @include displayFlex;
       @include flexDirectionColumn;
       justify-content: left;
       width: 70%;
       @include screenMax375 {
+        width: 100%;
         @include flexDirectionColumn;
       }
     }
@@ -24,9 +29,13 @@
       @include displayFlex;
       @include flexDirectionColumn;
       justify-content: right;
-      width: 29%;
+      width: 30%;
       @include screenMax375 {
-        @include flexDirectionColumn;
+        width: 100%;
+        height: 33px;
+        flex-direction:row-reverse;
+        justify-content: space-between;
+        align-items: center;
       }
     }
 
@@ -39,6 +48,11 @@
       margin: 30px 0;
       @include screenMax768 {
         width: 97%;
+      }
+      @include screenMax768 {
+        width: 100%;
+        margin: 0;
+        row-gap: 10px;
       }
   
    .collapse-logement, .collapse-equipement {

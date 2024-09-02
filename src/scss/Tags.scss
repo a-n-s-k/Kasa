@@ -1,10 +1,10 @@
 @import "./Variables.scss";
 
 .logement-tags {
-  display: flex;
+  @include displayFlex;
   gap: 1rem;
   .tags {
-    width: auto;
+    width:fit-content;
     height: 25px;
     background-color: $colorFf6060;
     color: $colorFff;
@@ -16,6 +16,12 @@
     margin-top: 20px;
     @include screenMax768 {
       font-size: 12px;
+    }
+    @include screenMax375 {
+      width:fit-content;
+      height: 18px;
+      font-size: 12px;
+      font-weight: bold;
     }
   }
 }
