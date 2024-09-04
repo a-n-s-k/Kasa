@@ -1,11 +1,13 @@
 @import "./Variables.scss";
 
-
 .error-container {
   @include flexContentCenter;
   @include flexDirectionColumn;
   @include screenMax768 {
     margin-top: 50px;
+  }
+  @include screenMax375 {
+    margin-top: 20px;
   }
   .error-title {
   color: $colorFf6060;
@@ -22,6 +24,9 @@
     font-size: 30px;
     @include screenMax768 {
       font-size: 18px;
+    }
+    @include screenMax375 {
+      font-size: 14px;
     }
   }     
 }

@@ -9,6 +9,10 @@
   @include screenMax768 {
     height: 125px;
   }
+  @include screenMax375 {
+    height: 125px;
+    margin-bottom: 20px;
+  }
   h1 {
     color: $colorFff;
     font-size: 48px;
@@ -19,6 +23,9 @@
     }
     @include screenMax768 {
       font-size: 24px;
+    }
+    @include screenMax375 {
+      font-size: 20px;
     }
   }
 }

@@ -14,8 +14,8 @@ export default function App () {
         <Routes>
           <Route path="/" element={<Accueil />} />
           <Route path="/apropos" element={<Apropos />} />
-          <Route path="/logement/:ficheId" element={<Fichelogement />} />
-          <Route path="*" element={<Erreur404 />} />
+          <Route path="/logement/:ficheId" element={<Fichelogement />}/>
+          <Route path="*" element={<Erreur404 /> }/>
         </Routes>
       </BrowserRouter>
     </div>

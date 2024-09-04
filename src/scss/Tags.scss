@@ -2,8 +2,16 @@
 
 .logement-tags {
   @include displayFlex;
+  flex-wrap: wrap;
   gap: 1rem;
+  align-items: center;
+  @include screenMax375 {
+    gap: 10px;
+  }
   .tags {
+    @include displayFlex;
+    justify-content: center;
+    align-items: center;
     width:fit-content;
     height: 25px;
     background-color: $colorFf6060;
@@ -11,16 +19,15 @@
     font-size: 14px;
     font-weight: 500;
     border-radius: 10px;
-    text-align: center;
     padding: 4px 24px;
     margin-top: 20px;
     @include screenMax768 {
       font-size: 12px;
     }
     @include screenMax375 {
-      width:fit-content;
+      margin-top: 10px;
+      gap: 10px;
       height: 18px;
-      font-size: 12px;
       font-weight: bold;
     }
   }

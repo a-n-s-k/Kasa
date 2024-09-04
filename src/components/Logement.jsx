@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, Navigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Slide from "./../components/Slide.jsx";
 import Tags from "./../components/Tags.jsx";
 import Description from "./Description.jsx";
@@ -9,13 +9,13 @@ import Stars from "./../components/Stars.jsx";
 import ItemsData from "./../data/logements.json";
 import "./../scss/Logement.scss";
 
+
 export default function Logement () {
   const { ficheId } = useParams();
   const ficheHabitat = ItemsData.find((item) => item.id === ficheId);
 
   return (  
   <>
-    {ficheHabitat ? (
       <div>
         <Slide slides={ficheHabitat.pictures} />
           <div className="logement-content">
@@ -34,9 +34,6 @@ export default function Logement () {
             <Description description={ficheHabitat.description} equipments= {ficheHabitat.equipments} />
           </div>
         </div>
-      ) : (
-        <Navigate replace to="/erreur404" />
-      )}
   </>
   );
 }
