@@ -16,24 +16,24 @@ export default function Logement () {
 
   return (  
   <>
-      <div>
-        <Slide slides={ficheHabitat.pictures} />
-          <div className="logement-content">
-            <div className="title-location-tags">
-              <Location title={ficheHabitat.title} location={ficheHabitat.location}/>
-              <Tags tags={ficheHabitat.tags} />
-            </div>
-            <div className="host-rates">
-              <Host name={ficheHabitat.host.name} picture={ficheHabitat.host.picture} />
-              <div className="logement-rates">
-                <Stars rating={ficheHabitat.rating} />
-              </div>
-            </div>
+    <div>
+      <Slide slides={ficheHabitat.pictures} />
+        <div className="logement-content">
+          <div className="title-location-tags">
+            <Location title={ficheHabitat.title} location={ficheHabitat.location}/>
+            <Tags tags={ficheHabitat.tags} />
           </div>
-          <div className="collapses-logement">
-            <Description description={ficheHabitat.description} equipments= {ficheHabitat.equipments} />
+          <div className="host-rates">
+            <Host name={ficheHabitat.host.name} picture={ficheHabitat.host.picture} />
+            <div className="logement-rates">
+              <Stars rating={ficheHabitat.rating} />
+            </div>
           </div>
         </div>
+        <div className="collapses-logement">
+          <Description description={ficheHabitat.description} equipments= {ficheHabitat.equipments} />
+        </div>
+      </div>
   </>
   );
 }
